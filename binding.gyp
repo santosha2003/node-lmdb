@@ -17,6 +17,16 @@
         "<!(node -e \"require('nan')\")",
         "dependencies/lmdb/libraries/liblmdb"
       ],
+       "cflags": [
+            "-fPIC",
+            "-O3",
+            "-D_WANT_SEMUN"
+          ],
+          "cflags_cc": [
+            "-fvisibility-inlines-hidden",
+            "-std=c++0x",
+            "-D_WANT_SEMUN"
+          ],
       "conditions": [
         ["OS=='linux'", {
           "variables": {
@@ -35,8 +45,7 @@
           ],
           "cflags": [
             "-fPIC",
-            "-fvisibility=hidden",
-            "-D_WANT_SEMUN"
+            "-fvisibility=hidden"
           ],
           "cflags_cc": [
             "-fPIC",
