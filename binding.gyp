@@ -35,7 +35,8 @@
           ],
           "cflags": [
             "-fPIC",
-            "-fvisibility=hidden"
+            "-fvisibility=hidden",
+            "-D_WANT_SEMUN"
           ],
           "cflags_cc": [
             "-fPIC",
